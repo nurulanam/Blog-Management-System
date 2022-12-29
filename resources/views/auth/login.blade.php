@@ -1,47 +1,42 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@extends('frontend.clearMaster')
+@section('banner')
+@endsection
+@section('content')
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 col-xl-5">
+        <div class="card mt-4">
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+            <div class="card-body py-4">
+                <div class="text-center mt-2">
+                    <x-auth-session-status class="mb-4" :status="session('status')" />
+                    <h3 class="text-danger"><b>Log In</b></h3>
+                </div>
+                <div class="p-2 mt-4">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <div class="from-group my-2">
+                            <label for="" class="form-label">E-mail :</label>
+                            <input type="email" class="form-control" name="email" required placeholder="Enter Your E-mail">
+                            @error('email')
+                                <p class="text-danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                        <div class="from-group my-2">
+                            <label for="" class="form-label">Password :</label>
+                            <input type="password" class="form-control" name="password" required placeholder="Enter Your Password">
+                            @error('password')
+                                <p class="text-danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                        <button class="btn btn-danger mt-2 w-100">LogIn</button>
+                    </form>
+                </div>
+            </div>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <!-- end card body -->
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+        <!-- end card -->
+        <div class="my-5 text-center">
+                <p class="mb-0">Don't have an account ? <a href="{{ route('register') }}" class="fw-semibold text-danger text-decoration-underline"> Register </a> </p>
+            </div>
+@endsection
