@@ -175,6 +175,7 @@
             <img src="{{ asset('frontend') }}/media/figure/ad.jpg" alt="Ad">
         </a>
     </div>
+
     <div class="margin-bottom-40">
         <div class="row gutters-40">
             <div class="col-lg-6">
@@ -299,6 +300,7 @@
             </div>
         </div>
     </div>
+    {{-- Category Type 1 Post  --}}
     <div class="margin-bottom-40">
         <div class="heading-layout1">
             <h2 class="heading-title">Action Games</h2>
@@ -382,18 +384,10 @@
             </div>
         </div>
     </div>
-    <div class="ad-banner-layout1 margin-bottom-40">
-        <a href="#">
-            <img src="{{ asset('frontend') }}/media/figure/ad2.jpg" alt="Ad">
-        </a>
-    </div>
+    {{-- Latest News  --}}
     <div class="margin-bottom-40">
         <div class="heading-layout1">
-            <h2 class="heading-title">Latest Games</h2>
-            <div class="heading-icon">
-                <a href="#" class="active"><i class="flaticon-left-arrow-1"></i></a>
-                <a href="#"><i class="flaticon-right-arrow"></i></a>
-            </div>
+            <h2 class="heading-title">Latest News</h2>
         </div>
         <div class="post-list-layout3">
             <div class="item-img">
