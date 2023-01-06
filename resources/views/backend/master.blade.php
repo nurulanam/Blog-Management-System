@@ -2,7 +2,17 @@
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
     data-sidebar-image="none">
 
-@include('backend.includes.head')
+<head>
+    <meta charset="utf-8" />
+    <title>@yield('title')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="@yield('mete_description')" name="description" />
+    <meta content="@yield('mete_author')" name="author" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @include('backend.includes.head')
+
+</head>
+
 
 
 <body>
@@ -716,6 +726,7 @@
     </div>
 
     @include('backend.includes.scripts')
+    @yield('ajaxScript')
 
 
     <script>

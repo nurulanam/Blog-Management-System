@@ -1,10 +1,4 @@
-<head>
 
-    <meta charset="utf-8" />
-    <title>@yield('title')</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="@yield('mete_description')" name="description" />
-    <meta content="@yield('mete_author')" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{asset('backend')}}/assets/images/favicon.ico">
 
@@ -42,5 +36,3 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-
-</head>

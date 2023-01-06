@@ -1,5 +1,22 @@
 @extends('frontend.clearMaster')
 @section('banner')
+<section class="inner-page-banner bg-common" data-bg-image="{{ asset('frontend/media/figure/banner1.jpg') }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumbs-area">
+                    <h1>Login</h1>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>Login</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
 @section('content')
 <div class="row justify-content-center">

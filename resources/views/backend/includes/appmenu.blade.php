@@ -47,6 +47,13 @@
                         </a>
                     </li>
                     {{-- End Dashboard --}}
+                    {{-- Start Dashboard --}}
+                    <li class="nav-item">
+                        <a href="{{ route('tag.index') }}" class="nav-link" data-key="t-horizontal">
+                            <i class="mdi mdi-speedometer"></i> <span data-key="dashboard">Tags</span>
+                        </a>
+                    </li>
+                    {{-- End Dashboard --}}
 
                 {{-- Start School setup  --}}
                 {{-- <li class="nav-item">
